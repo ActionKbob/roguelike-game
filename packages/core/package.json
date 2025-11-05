@@ -1,0 +1,31 @@
+{
+  "name": "@repo/core",
+  "version": "0.0.0",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./*": "./dist/*.js"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "check-types": "tsc --noEmit",
+    "dev": "tsc --watch",
+    "lint": "eslint src --max-warnings 0"
+  },
+  "peerDependencies": {
+    "react": "^19"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/react": "^19.1.0",
+    "eslint": "^9.39.1",
+    "typescript": "5.9.2"
+  },
+  "dependencies": {
+    "bitecs": "^0.3.40",
+    "phaser": "^3.90.0"
+  }
+}
