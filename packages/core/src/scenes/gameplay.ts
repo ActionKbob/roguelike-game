@@ -1,9 +1,11 @@
 import { Scene, GameObjects } from "phaser";
 
-import { IWorld } from "bitecs";
+import { createWorld, IWorld } from "bitecs";
 
 export class Gameplay extends Scene
 {
+
+	private _world! : IWorld
 
 	private _blitter! : GameObjects.Blitter;
 	get blitter() : GameObjects.Blitter
@@ -16,13 +18,22 @@ export class Gameplay extends Scene
 		super( "Gameplay" );
 	}
 
-	preload()
+	init() : void
 	{
 		console.log("...Gameplay...");
+
+		this._world = createWorld();
+
 		this._blitter = this.add.blitter( 0, 0, 'dungeon' );
 	}
 
-	create() {
-    this._blitter.create( 0, 0, ( 12 * 7 + 2 ) );
+	create() : void
+	{
+    
   }
+
+	update( _time : number, _delta : number) : void
+	{
+		
+	}
 }
