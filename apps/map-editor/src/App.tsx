@@ -1,12 +1,11 @@
-import { useState } from 'react'
+import { EditorInterface } from "./components/EditorInterface";
+import { MapEditorProvider } from "./context";
 
 function App() {
   return (
-    <>
-			<div>
-      	MAP_EDITOR
-			</div>
-    </>
+		<MapEditorProvider>
+			<EditorInterface />
+		</MapEditorProvider>
   )
 }
 
