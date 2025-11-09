@@ -1,6 +1,11 @@
+import { useMapEditor } from "../context";
 import { Button } from "./Button";
+import { TextInput } from "./TextInput";
 
 export const EditorInterface = () => {
+
+	const mapConfig = useMapEditor();
+
 	return (
 		<div className="flex flex-col w-screen h-screen">
 			<div className="flex justify-between bg-slate-900 px-8 py-6 text-white drop-shadow-2xl/25 z-10">
@@ -36,7 +41,11 @@ export const EditorInterface = () => {
 			<div className="flex grow">
 				<div className="grow bg-slate-500">editor</div>
 				<div className="basis-[350px] h-full bg-slate-800 drop-shadow-2xl/50">
-					side bar
+					
+					<form action="">
+						<TextInput label="Map name" />
+					</form>
+
 				</div>
 			</div>
 		</div>
