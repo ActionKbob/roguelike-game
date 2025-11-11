@@ -7,3 +7,7 @@ export const Renderable = {
 	texture : [] as number[],
 	frame : [] as number[]
 };
+
+export const Tile = {
+	type : [] as number[]
+}

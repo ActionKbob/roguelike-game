@@ -26,7 +26,7 @@ export const PhaserGame = () => {
 						width  : window.innerWidth / 3,
 						height : window.innerHeight / 3
 					},
-					// pixelArt : true,
+					pixelArt : true,
 					antialias : false,
 					scene : [
 						Scenes.Preloader,

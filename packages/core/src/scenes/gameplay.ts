@@ -50,8 +50,13 @@ export class Gameplay extends Scene
 		Position.x[ eid ] = 50;
 		Position.y[ eid ] = 50;
 
-		Renderable.frame[ eid ] = ( 12 * 7 ) + 3;
+		Renderable.frame[ eid ] = ( 12 * 7 ) + 4;
   }
+
+	createMap() : void
+	{
+		
+	}
 
 	update( _time : number, _delta : number) : void
 	{
