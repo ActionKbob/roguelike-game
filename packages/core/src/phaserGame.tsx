@@ -22,12 +22,12 @@ export const PhaserGame = () => {
 					parent : containerRef.current,
 					backgroundColor : "#1a5c85",
 					scale : {
-						mode : Phaser.Scale.ScaleModes.FIT,
-						width  : window.innerWidth,
-						height : window.innerHeight
+						mode : Phaser.Scale.ScaleModes.ENVELOP,
+						width  : window.innerWidth / 3,
+						height : window.innerHeight / 3
 					},
-					pixelArt : true,
-					antialias : true,
+					// pixelArt : true,
+					antialias : false,
 					scene : [
 						Scenes.Preloader,
 						Scenes.Gameplay

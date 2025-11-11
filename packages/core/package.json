@@ -4,14 +4,17 @@
   "files": [
     "dist"
   ],
+  "imports": {
+    "#*": "./src/*"
+  },
   "exports": {
     "./*": "./dist/*.js"
   },
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && tsc-alias",
     "check-types": "tsc --noEmit",
-    "dev": "tsc --watch",
+    "dev": "tsc --watch && tsc-alias --watch",
     "lint": "eslint src --max-warnings 0"
   },
   "peerDependencies": {
@@ -22,10 +25,11 @@
     "@repo/typescript-config": "*",
     "@types/react": "^19.1.0",
     "eslint": "^9.39.1",
+    "tsc-alias": "^1.8.16",
     "typescript": "5.9.2"
   },
   "dependencies": {
-    "bitecs": "^0.3.40",
+    "bitecs": "github:NateTheGreatt/bitECS#rc-0-4-0",
     "phaser": "^3.90.0"
   }
 }
